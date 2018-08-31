@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import './App.css';
+import ContentBlock from './components/ContentBlock';
+import AboutMe from './components/AboutMe';
+import Skills from './components/Skills';
+import Contact from './components/Contact';
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faAtom, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import { faAt } from '@fortawesome/free-solid-svg-icons'
+import './App.scss';
+
+library.add(faUserCircle, faAtom, faAt)
+const aboutMe = <AboutMe />
+const skills = <Skills />
+const contact = <Contact />
 
 class App extends Component {
   render() {
     return (
       <div className="App container">
-        <Header className="col-xs-12 col-md-7"/>
-        <img src={require('./IMG_1152.jpg')} alt="home page" className="App-image col-xs-12 col-md-5"></img>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Header />
+        <ContentBlock content={aboutMe} />
+        <ContentBlock content={skills} />
+        <ContentBlock content={contact} />
       </div>
     );
   }
