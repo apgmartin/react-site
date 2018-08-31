@@ -7,11 +7,6 @@
   height: 80px;
 }
 
-.App-image {
-  width: calc(100% - 2rem);
-  margin: 1rem;
-}
-
 .App-intro {
   font-size: large;
 }
