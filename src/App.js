@@ -15,10 +15,25 @@ const skills = <Skills />
 const contact = <Contact />
 
 class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      language: 'eng'
+    }
+  }
+
+  changeLanguage(evt) {
+    evt.preventDefault();
+    this.setState({
+      language: evt.target.dataset.lang
+    })
+  }
+
   render() {
     return (
       <div className="App container">
-        <Header />
+        <Header changeLanguage={this.changeLanguage.bind(this)} currentLanguage={this.state.language}/>
         <ContentBlock content={aboutMe} />
         <ContentBlock content={skills} />
         <ContentBlock content={contact} />
