@@ -1,5 +1,5 @@
 import React from 'react';
-import './Skills.scss';
+import './scss/Skills.scss';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Skills = () => (

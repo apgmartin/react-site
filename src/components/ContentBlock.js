@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './ContentBlock.scss';
+import './scss/ContentBlock.scss';
 
 class ContentBlock extends Component {
   constructor(props) {
