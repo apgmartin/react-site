@@ -8,7 +8,7 @@ class ContentBlock extends Component {
   render() {
     return (
       <div className="ContentBlock container">
-        {this.props.content}
+        {this.props.children}
       </div>
     );
   }
