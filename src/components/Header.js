@@ -1,4 +1,5 @@
 import React from 'react';
+import LanguageSelector from './LanguageSelector';
 import './scss/Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -10,22 +11,7 @@ const getSubtext = language => {
 
 const Header = ({ language, changeLanguage }) => (
     <header className="Header row">
-        <div className="Header__language-selector">
-            <p 
-                onClick={() => changeLanguage('ENG')} 
-                className={"Header__language-selector__lang Header__language-selector__lang--eng " + (language === 'ENG' ? 'underline' : '')}
-                data-lang="ENG"
-            >
-                ENG
-            </p>
-            <p 
-                onClick={() => changeLanguage('SWE')}
-                className={"Header__language-selector__lang Header__language-selector__lang--swe " + (language === 'SWE' ? 'underline' : '')}
-                data-lang="SWE"
-            >
-                SWE
-            </p>
-        </div>
+        <LanguageSelector language={language} changeLanguage={changeLanguage}/>
         <div className="col-12 col-md-6 col-lg-5">
             <h1 className="Header__title">Ali Martin</h1>
             <p className="Header__subtext">{getSubtext(language)}</p>
